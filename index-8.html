@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merci Chef.Co | Özel Şef Kiralama</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header" id="header">
+  <a class="brand" href="#home"><span>MERCI</span><small>CHEF.CO</small></a>
+  <nav>
+    <a href="#home" data-i18n="navHome">ANA SAYFA</a>
+    <a href="#chefs" data-i18n="navChefs">ŞEFLER</a>
+    <a href="#booking" data-i18n="navBooking">ORGANİZASYON</a>
+    <a href="#contact" data-i18n="navContact">İLETİŞİM</a>
+  </nav>
+  <div class="actions">
+    <a class="wa" href="https://wa.me/905304150729" target="_blank">WhatsApp</a>
+    <select id="language" aria-label="Language">
+      <option value="tr">TR</option><option value="en">EN</option><option value="fr">FR</option><option value="ar">AR</option>
+    </select>
+  </div>
+  <button class="menu-btn" id="menuBtn">☰</button>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="eyebrow" data-i18n="eyebrow">PRIVATE CHEF EXPERIENCE</p>
+    <h1 data-i18n="heroTitle">Özel Şef Deneyiminizi<br><em>kusursuzca planlayın.</em></h1>
+    <p class="hero-copy" data-i18n="heroCopy">Şefinizi seçin, mutfağınızı belirleyin, menünüzü oluşturun, tarihi ve organizasyon detaylarını seçin. Son adımda güvenli ödeme paneline geçin.</p>
+    <a class="primary" href="#booking" data-i18n="start">ORGANİZASYONU PLANLA <span>→</span></a>
+  </div>
+</section>
+
+<section id="chefs" class="section light">
+  <div class="section-head"><p class="eyebrow">MERCI CHEF.CO</p><h2 data-i18n="chefTitle">Size uygun şefi seçin</h2><p data-i18n="chefCopy">Farklı mutfaklara ve davetlere uygun profesyonel şefler arasından seçim yapın.</p></div>
+  <div class="chef-grid">
+    <article class="chef-card" data-chef="Mert Chef" data-cuisine="Modern Mediterranean">
+      <div class="chef-image chef-1"></div><div class="chef-body"><span>01</span><h3>Mert Chef</h3><p>Modern Akdeniz</p><button class="choose-chef" data-i18n="choose">ŞEFİ SEÇ</button></div>
+    </article>
+    <article class="chef-card" data-chef="Sofia Chef" data-cuisine="French Cuisine">
+      <div class="chef-image chef-2"></div><div class="chef-body"><span>02</span><h3>Sofia Chef</h3><p>Fransız Mutfağı</p><button class="choose-chef" data-i18n="choose">ŞEFİ SEÇ</button></div>
+    </article>
+    <article class="chef-card" data-chef="Luca Chef" data-cuisine="Italian Cuisine">
+      <div class="chef-image chef-3"></div><div class="chef-body"><span>03</span><h3>Luca Chef</h3><p>İtalyan Mutfağı</p><button class="choose-chef" data-i18n="choose">ŞEFİ SEÇ</button></div>
+    </article>
+  </div>
+</section>
+
+<section id="booking" class="section booking-section">
+ <div class="booking-wrap">
+  <div class="booking-intro"><p class="eyebrow" data-i18n="planEyebrow">YOUR PRIVATE DINING</p><h2 data-i18n="planTitle">Organizasyonunuzu<br><em>adım adım oluşturun.</em></h2><p data-i18n="planCopy">Şef, mutfak, menü, tarih ve davet bilgilerinizi seçin. Özetinizi gördükten sonra ödeme adımına geçebilirsiniz.</p><div class="steps"><b>01</b> Şef <b>02</b> Menü <b>03</b> Tarih <b>04</b> Organizasyon <b>05</b> Ödeme</div></div>
+  <form id="bookingForm" class="booking-card">
+   <div class="progress"><span id="progressBar"></span></div>
+   <div class="step active" data-step="1"><label data-i18n="chefLabel">Şef seçimi</label><div class="select-grid" id="chefOptions"><button type="button" class="option" data-value="Mert Chef">Mert Chef<small>Modern Akdeniz</small></button><button type="button" class="option" data-value="Sofia Chef">Sofia Chef<small>Fransız Mutfağı</small></button><button type="button" class="option" data-value="Luca Chef">Luca Chef<small>İtalyan Mutfağı</small></button></div></div>
+   <div class="step" data-step="2"><label data-i18n="cuisineLabel">Mutfak seçimi</label><div class="select-grid"><button type="button" class="option" data-value="Akdeniz">Akdeniz<small>Fresh & seasonal</small></button><button type="button" class="option" data-value="Fransız">Fransız<small>Classic & refined</small></button><button type="button" class="option" data-value="İtalyan">İtalyan<small>Authentic & warm</small></button><button type="button" class="option" data-value="Özel Menü">Özel Menü<small>Chef's choice</small></button></div></div>
+   <div class="step" data-step="3"><label data-i18n="menuLabel">Menü</label><select id="menu" required><option value="">Menü seçin</option><option>4 Course Tasting Menu</option><option>6 Course Signature Menu</option><option>8 Course Premium Menu</option><option>Çocuk / özel beslenme menüsü</option></select></div>
+   <div class="step" data-step="4"><label data-i18n="dateLabel">Tarih</label><input id="date" type="date" required><label data-i18n="timeLabel">Saat</label><input id="time" type="time" required></div>
+   <div class="step" data-step="5"><label data-i18n="eventLabel">Organizasyon türü</label><div class="select-grid two"><button type="button" class="option" data-value="Doğum Günü">🎂 Doğum Günü</button><button type="button" class="option" data-value="Özel Gün">✨ Özel Gün</button><button type="button" class="option" data-value="Romantik Akşam">♥ Romantik Akşam</button><button type="button" class="option" data-value="Kurumsal Davet">◆ Kurumsal Davet</button></div><label data-i18n="guestLabel">Kaç kişi olacak?</label><input id="guests" type="number" min="1" max="100" value="2" required></div>
+   <div class="step" data-step="6"><label data-i18n="summaryLabel">Organizasyon özeti</label><div id="summary" class="summary"></div><div class="price"><span data-i18n="estimated">Tahmini toplam</span><strong>€ <span id="price">0</span></strong></div><p class="note" data-i18n="paymentNote">Ödeme adımında kesin fiyat ve güvenli ödeme seçenekleri gösterilecektir.</p></div>
+   <div class="form-actions"><button type="button" id="prev" class="secondary">←</button><button type="button" id="next" class="primary" data-i18n="continue">DEVAM ET →</button></div>
+  </form>
+ </div>
+</section>
+
+<section id="contact" class="contact"><p class="eyebrow">MERCI CHEF.CO</p><h2 data-i18n="contactTitle">Özel davetiniz için<br><em>bizimle iletişime geçin.</em></h2><a class="primary" href="mailto:contact@mercichef.co" data-i18n="email">E-POSTA GÖNDER</a></section>
+</main>
+<footer><span>© 2026 Merci Chef.Co</span><span>Private Chef & Gastronomy Experiences</span></footer>
+<script src="script.js"></script>
+</body></html>
